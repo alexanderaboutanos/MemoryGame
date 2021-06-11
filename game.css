@@ -1,0 +1,70 @@
+h1 {
+    font-size: 4rem;
+    text-align: center;
+}
+
+.cardContainer {
+    width: 15%;
+    height: 200px;
+    margin: 10px;
+    display: inline-block;
+    background-color: transparent;
+
+    /* this is just a fun little thing that adds a 3D effect */
+    perspective: 2000px;
+}
+
+.flipper {
+    position: relative;
+    border: 1px solid black;
+    width: 100%;
+    height: 100%;
+    transition: transform 0.25s;
+    transform-style: preserve-3d;
+}
+
+.front-side, .back-side{
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    text-align: center;
+    font-size: 2em;
+    backface-visibility: hidden;
+}
+
+/* modify the resting position of the back-side to a 180 deg rotation. */
+.back-side {
+    transform: rotateY(180deg);
+}
+
+/* add and remove the following class to flip the element */
+.flipped {
+    transform: rotateY(180deg)
+}
+
+
+/*  */
+
+#splashPage {
+   display:block;
+   position: absolute;
+   margin: auto;
+   background-color: salmon;
+   text-align: center;
+   height: 75%;
+   width: 75%;
+   border: 10px solid;
+}
+
+#enterButton{
+    font-size: 5em;
+}
+
+.disappear {
+    display: none;
+}
+
+
+
+
+
